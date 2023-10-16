@@ -1,0 +1,125 @@
+
+const splide = new Splide( '.splide', {
+  perPage: 3,
+  focus  : 0,
+  omitEnd: true,
+  gap: "1.5rem"
+} );
+
+splide.mount();
+
+gsap.from("#developer", {opacity:0, x:"-100%", duration:1.5})
+gsap.from("#stevemorales", {opacity:0, x:"-100%", duration:1.5})
+gsap.from("#dwresume", {opacity:0, x:"-100%", duration:1.5})
+gsap.from("#avatarfoto", {opacity:0, x:"100%", duration:1.5})
+
+gsap.from("#aboutcard",  {scrollTrigger:{
+  trigger:"#aboutcard",
+  start:"top bottom",
+  scrub:1}
+  , opacity:0, x:"-100%", duration:1})
+
+gsap.from("#emojicara",  {scrollTrigger:{
+  trigger:"#emojicara",
+  start:"top bottom",
+  scrub:1}
+  , opacity:0, x:"100%", duration:1})
+
+gsap.from("#skills", {opacity:0, y:"100%", duration:2.5})
+
+gsap.from("#contactcard", {opacity:0, x:"-100%", duration:1.5})
+gsap.from("#emojilaptop", {opacity:0, x:"100%", duration:1.5})
+
+gsap.from("#aboutmetitle",  {scrollTrigger:{
+  trigger:"#aboutmetitle",
+  start:"top bottom",
+  scrub:1}
+  , opacity:0, y:"-100%", duration:1})
+
+gsap.from("#projectitle",  {scrollTrigger:{
+  trigger:"#projectitle",
+  start:"top bottom",
+  scrub:1}
+  , opacity:0, y:"-100%", duration:1})
+
+gsap.from("#contactitle",  {scrollTrigger:{
+  trigger:"#contactitle",
+  start:"top bottom",
+  scrub:1}
+  , opacity:0, y:"-100%", duration:1})  
+
+document.addEventListener("DOMContentLoaded", function() {
+  glowInText();
+});
+
+function glowInText() {
+  let glowInTexts = document.querySelectorAll(".glowIn");
+  glowInTexts.forEach(glowInText => {
+    let letters = glowInText.textContent.split("");
+    glowInText.textContent = "";
+    letters.forEach((letter, i) => {
+      let span = document.createElement("span");
+      span.textContent = letter;
+      span.style.animation = "glow-in 0.8s both";
+      span.style.animationDelay = `${i * 0.07}s`;
+      glowInText.append(span);
+    });
+  });
+}
+
+function activarGlowInSiVisible() {
+  let seccion = document.getElementById("contact"); // Cambia "miSeccion" por el ID de tu sección
+  let seccionRect = seccion.getBoundingClientRect();
+
+  if (seccionRect.top <= window.innerHeight && seccionRect.bottom >= 0) {
+    glowInText(); // Llama a tu función glowIn
+    window.removeEventListener("scroll", activarGlowInSiVisible); // Detiene la detección una vez que se ha activado
+  }
+}
+
+window.addEventListener("scroll", activarGlowInSiVisible);
+
+
+document.addEventListener('DOMContentLoaded', function () {
+  var links = document.querySelectorAll('a[href^="#"]');
+
+  for (var i = 0; i < links.length; i++) {
+    links[i].addEventListener('click', function (event) {
+      event.preventDefault();
+      var targetId = this.getAttribute('href').substring(1);
+      var targetElement = document.getElementById(targetId);
+
+      if (targetElement) {
+        var yOffset = window.pageYOffset;
+        var targetOffset = targetElement.getBoundingClientRect().top + yOffset;
+        window.scrollTo({
+          top: targetOffset,
+          behavior: 'smooth' // Esto controla la animación suave
+        });
+      }
+    });
+  }
+});
+
+
+const botonVolverArriba = document.getElementById("botonVolverArriba");
+
+window.addEventListener("scroll", function() {
+  if (window.scrollY > 300) {
+    botonVolverArriba.style.display = "block";
+  } else {
+    botonVolverArriba.style.display = "none";
+  }
+});
+
+botonVolverArriba.addEventListener("click", function() {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+});
+
+
+
+    
+
+
+
+
