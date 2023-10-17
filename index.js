@@ -1,6 +1,14 @@
 
 const splide = new Splide( '.splide', {
   perPage: 3,
+  breakpoints: {
+    640: {
+      perPage: 1,
+    },
+    1060: {
+      perPage: 2,
+    }
+  },
   focus  : 0,
   omitEnd: true,
   gap: "1.5rem"
@@ -17,7 +25,7 @@ gsap.from("#aboutcard",  {scrollTrigger:{
   trigger:"#aboutcard",
   start:"top bottom",
   scrub:1}
-  , opacity:0, x:"-100%", duration:1})
+  , opacity:0, x:"-10%", duration:0.5})
 
 gsap.from("#emojicara",  {scrollTrigger:{
   trigger:"#emojicara",

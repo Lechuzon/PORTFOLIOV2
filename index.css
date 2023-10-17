@@ -269,29 +269,6 @@ body {
   box-shadow: 0 0.15em 1.5em rgba(36, 168, 255, 0.666), 0 0.15em 0.333em -0.1em rgba(0, 84, 240, 0.666), inset 0 0.15em 0.3em -0.1em rgba(36, 113, 255, 0), inset 0 0 0.05em 0.0333em rgba(36, 113, 255, 0.25), inset 0 0.1em 0.666em rgba(20, 193, 245, 0.333);
 }
 
-/* Telefonos */
-@media screen and (max-width: 480px) {
-  .inner-profile {
-    flex-wrap: wrap;
-    flex-direction: column-reverse;
-    height: 100vh;
-    gap: 20px;
-  }
-  .profile-text {
-    text-align: center;
-  }
-  .about {
-    margin: auto;
-    margin-top: 20px;
-  }
-  .custom-shape-divider-bottom-1677119079 {
-    display: none;
-  }
-  .card {
-    width: 100%;
-    min-width: 100%;
-  }
-}
 /* animaciones */
 .text-focus-in {
   animation: text-focus-in 2s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
@@ -445,7 +422,7 @@ img {
 .deepshadow {
   display: block;
   margin: 11px 0 17px 0;
-  font-size: 4.5vw;
+  font-size: 85px;
   line-height: 80px;
   color: #f7f7f7;
   text-shadow: 0 13.36px 8.896px #c4b59d, 0 -2px 1px #fff;
@@ -971,12 +948,12 @@ a {
 }
 
 .btn-list {
-  margin: 48px 0;
-  padding: 10px 16px;
-  position: relative;
-  list-style-type: none;
   width: 1180px;
   border-radius: 15px;
+  display: grid;
+  grid-auto-rows: 10rem;
+  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  background-color: #151515;
 }
 
 .btn-list.normal:after {
@@ -999,7 +976,7 @@ a {
   border-radius: 3px 3px 0 0;
 }
 
-.btn-list li:not(.title) {
+.btn-list div:not(.title) {
   float: left;
 }
 
@@ -1026,7 +1003,6 @@ a {
 
 #light, #dark {
   margin: 20px;
-  display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
@@ -1173,4 +1149,118 @@ html {
   cursor: pointer;
   transition: opacity 0.3s;
   width: 80px;
+}
+
+/* Telefonos */
+@media screen and (max-width: 480px) {
+  #home {
+    margin-top: -50px;
+  }
+  .menu-bar {
+    visibility: hidden;
+  }
+  .avatar-list {
+    padding: 0px;
+    padding-left: 0px;
+  }
+  .deepshadow {
+    font-size: 70px;
+  }
+  .btn {
+    margin: 60px;
+    align-items: center;
+  }
+  #developer {
+    font-size: 45px;
+  }
+  .inner-profile {
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+    height: 100vh;
+    gap: 20px;
+  }
+  .profile-text {
+    text-align: center;
+  }
+  .firstitle {
+    font-size: 50px;
+  }
+  .containerabout {
+    flex-direction: column;
+  }
+  .aboutmecard {
+    width: 380px;
+    font-size: 15px;
+    margin-bottom: 60px;
+    margin-top: -60px;
+  }
+  .containerabout img {
+    width: 250px;
+    height: 250px;
+  }
+  .skills {
+    display: block;
+  }
+  .textskills {
+    writing-mode: horizontal-tb;
+    text-orientation: inherit;
+    padding-left: 20%;
+  }
+  .btn-list {
+    width: 330px;
+    border-radius: 15px;
+    display: grid;
+    grid-auto-rows: 5rem;
+    grid-template-columns: repeat(auto-fit, minmax(4rem, 1.5fr));
+    background-color: rgba(0, 0, 0, 0);
+  }
+  .btn-list img {
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+  #light .btn-gradient {
+    box-shadow: none;
+  }
+  .abtitle {
+    font-size: 25px;
+  }
+  .secondtitle {
+    font-size: 50px;
+  }
+  .botoncard {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .botoncard .btn {
+    text-align: center;
+    margin: 0 0 25px;
+    margin-top: 20px;
+  }
+  #projects {
+    height: 130vh;
+  }
+  #contact {
+    height: 130vh;
+  }
+  .containercontact {
+    flex-direction: column;
+  }
+  .contactmecard {
+    width: 380px;
+    margin-top: -60px;
+  }
+  .contactmecard h1 {
+    font-size: 30px;
+    text-align: center;
+  }
+  .contactmecard span {
+    font-size: 18px;
+  }
+  .contactmecard p {
+    font-size: 20px;
+  }
+  .retratolaptop {
+    width: 70%;
+  }
 }/*# sourceMappingURL=index.css.map */

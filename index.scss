@@ -17,7 +17,7 @@
 
 }
 
-$color: #7a1ff0; // so that we can transform it with SCSS
+$color: #7a1ff0; 
 $altColor: saturate(lighten(adjust-hue($color, 25deg), 5), 10);
 
 
@@ -363,34 +363,6 @@ body {
 }
 
 
-/* Telefonos */
-@media screen and (max-width: 480px) {
-	.inner-profile {
-		flex-wrap: wrap;
-		flex-direction: column-reverse;
-		height: 100vh;
-		gap: 20px;
-	}
-
-	.profile-text {
-		text-align: center;
-	}
-
-	.about {
-		margin: auto;
-		margin-top: 20px;
-	}
-
-	.custom-shape-divider-bottom-1677119079 {
-		display: none;
-	}
-
-	.card {
-		width: 100%;
-		min-width: 100%;
-	}
-}
-
 /* animaciones */
 .text-focus-in {
 	animation: text-focus-in 2s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
@@ -569,7 +541,7 @@ img {
 .deepshadow {
 	display: block;
 	margin: 11px 0 17px 0;
-	font-size: 4.5vw;
+	font-size: 85px;
 	line-height: 80px;
 	color: #f7f7f7;
 	text-shadow: 0 13.36px 8.896px #c4b59d, 0 -2px 1px #fff;
@@ -1133,12 +1105,12 @@ a {
 
 .btn-list
 {
-	margin:48px 0;
-	padding:10px 16px;
-	position:relative;
-	list-style-type: none;
 	width: 1180px;
 	border-radius: 15px;
+	display: grid;
+	grid-auto-rows: 10rem;
+	grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+	background-color: #151515;
 }
 
 .btn-list.normal:after
@@ -1164,7 +1136,7 @@ a {
 	border-radius:3px 3px 0 0
 }
 
-.btn-list li:not(.title)
+.btn-list div:not(.title)
 {
 	float:left
 }
@@ -1197,9 +1169,6 @@ a {
 #light,#dark
 {
 	margin:20px;
-	display:-webkit-box;
-	display:-ms-flexbox;
-	display:flex;
 	-webkit-box-align:center;
 	-ms-flex-align:center;
 	align-items:center;
@@ -1416,3 +1385,146 @@ html {
 
 
 @import url(https://use.typekit.net/ztx1wfr.css);
+
+/* Telefonos */
+@media screen and (max-width: 480px) {
+	
+	#home {
+		margin-top: -50px;
+	}
+
+	.menu-bar {
+		visibility: hidden;
+	}
+	
+	.avatar-list {
+		padding: 0px;
+		padding-left: 0px;
+	}
+
+	.deepshadow {
+		font-size: 70px;
+	}
+
+	.btn {
+		margin: 60px;
+		align-items: center;
+	}
+
+	#developer {
+		font-size: 45px;
+	}
+
+	.inner-profile {
+		flex-wrap: wrap;
+		flex-direction: column-reverse;
+		height: 100vh;
+		gap: 20px;
+	}
+
+	.profile-text {
+		text-align: center;
+	}
+
+	.firstitle {
+		font-size: 50px;
+	}
+
+	.containerabout{
+		flex-direction: column;
+	}
+
+	.aboutmecard {
+		width: 380px;
+		font-size: 15px;
+		margin-bottom: 60px;
+		margin-top: -60px;
+	}
+	
+	.containerabout img {
+		width: 250px;
+		height: 250px;
+	}
+
+	.skills {
+		display: block;
+	}
+
+	.textskills {
+	writing-mode: horizontal-tb;
+	text-orientation:inherit;
+	padding-left: 20%;
+	}
+
+	.btn-list {
+		width: 330px;
+		border-radius: 15px;
+		display: grid;
+		grid-auto-rows: 5rem;
+		grid-template-columns: repeat(auto-fit, minmax(4rem, 1.5fr));
+		background-color: #00000000;
+	}
+
+	.btn-list img {
+		object-fit: contain;
+	}
+
+	#light .btn-gradient {
+	box-shadow: none;
+	}
+
+	.abtitle {
+		font-size: 25px;
+	}
+
+	.secondtitle {
+		font-size: 50px;
+	}
+
+	.botoncard {
+		display: flex;
+		align-items: center;
+		gap: 10px;
+	}
+
+	.botoncard .btn {
+		text-align: center;
+		margin: 0 0 25px;
+		margin-top: 20px;
+	}
+
+	#projects {
+		height: 130vh;
+	}
+
+	#contact {
+		height: 130vh;
+	}
+
+	.containercontact{
+		flex-direction: column;
+	}
+
+	.contactmecard {
+		width: 380px;
+		margin-top: -60px;
+	}
+
+	.contactmecard h1 {
+		font-size: 30px;
+		text-align: center;
+	}
+
+	.contactmecard span {
+		font-size: 18px;
+	}
+
+	.contactmecard p {
+		font-size: 20px;
+	}
+
+	.retratolaptop {
+		width: 70%;
+	}
+
+}
