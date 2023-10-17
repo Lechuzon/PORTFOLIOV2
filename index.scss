@@ -1387,7 +1387,7 @@ html {
 @import url(https://use.typekit.net/ztx1wfr.css);
 
 /* Telefonos */
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 600px) {
 	
 	#home {
 		margin-top: -50px;
@@ -1457,7 +1457,7 @@ html {
 	}
 
 	.btn-list {
-		width: 330px;
+		width: auto;
 		border-radius: 15px;
 		display: grid;
 		grid-auto-rows: 5rem;
@@ -1528,3 +1528,4 @@ html {
 	}
 
 }
+
