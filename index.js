@@ -2,12 +2,9 @@
 const splide = new Splide( '.splide', {
   perPage: 3,
   breakpoints: {
-    640: {
+    600: {
       perPage: 1,
     },
-    1060: {
-      perPage: 2,
-    }
   },
   focus  : 0,
   omitEnd: true,
