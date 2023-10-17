@@ -60,7 +60,7 @@ body {
 	min-height: 100vh;
 
 	font-size: 2rem;
-	font-family: "objektiv-mk2", sans-serif;
+	font-family: "Poppins", sans-serif;
 
 	background: #f0f0f0;
 
@@ -1407,8 +1407,8 @@ html {
 	}
 
 	.btn {
-		margin: 60px;
 		align-items: center;
+		margin: 50px auto;
 	}
 
 	#developer {
@@ -1427,7 +1427,9 @@ html {
 	}
 
 	.firstitle {
-		font-size: 50px;
+		font-size: 60px;
+		font-family: "Poppins", sans-serif;
+		letter-spacing: 0em;
 	}
 
 	.containerabout{
@@ -1478,7 +1480,9 @@ html {
 	}
 
 	.secondtitle {
-		font-size: 50px;
+		font-size: 60px;
+		font-family: "Poppins", sans-serif;
+		letter-spacing: 0em;
 	}
 
 	.botoncard {
@@ -1499,6 +1503,11 @@ html {
 
 	#contact {
 		height: 130vh;
+	}
+
+	.contactme {
+		background: none; 
+		background-color: #000000f3;
 	}
 
 	.containercontact{
@@ -1526,6 +1535,7 @@ html {
 	.retratolaptop {
 		width: 70%;
 	}
+
 
 }
 

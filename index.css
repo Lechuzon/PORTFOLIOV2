@@ -17,7 +17,7 @@
 body {
   min-height: 100vh;
   font-size: 2rem;
-  font-family: "objektiv-mk2", sans-serif;
+  font-family: "Poppins", sans-serif;
   background: #f0f0f0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -1166,8 +1166,8 @@ html {
     font-size: 70px;
   }
   .btn {
-    margin: 60px;
     align-items: center;
+    margin: 50px auto;
   }
   #developer {
     font-size: 45px;
@@ -1182,7 +1182,9 @@ html {
     text-align: center;
   }
   .firstitle {
-    font-size: 50px;
+    font-size: 60px;
+    font-family: "Poppins", sans-serif;
+    letter-spacing: 0em;
   }
   .containerabout {
     flex-direction: column;
@@ -1224,7 +1226,9 @@ html {
     font-size: 25px;
   }
   .secondtitle {
-    font-size: 50px;
+    font-size: 60px;
+    font-family: "Poppins", sans-serif;
+    letter-spacing: 0em;
   }
   .botoncard {
     display: flex;
@@ -1241,6 +1245,10 @@ html {
   }
   #contact {
     height: 130vh;
+  }
+  .contactme {
+    background: none;
+    background-color: rgba(0, 0, 0, 0.9529411765);
   }
   .containercontact {
     flex-direction: column;
