@@ -1181,6 +1181,7 @@ html {
     font-size: 70px;
     font-family: "Poppins", sans-serif;
     letter-spacing: 0em;
+    text-shadow: none;
   }
   .containerabout {
     flex-direction: column;
