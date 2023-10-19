@@ -21,7 +21,7 @@ const translations = {
     nav2: "Proyectos",
     nav3: "Contacto",
     buttonhome: "Descargar CV",
-    aboutmetitle: "Acerca de mi",
+    aboutmetitle: "Sobre mi",
     aboutmegreeting: "¡Hola!",
     aboutmeinfo: "Soy un desarrollador full-stack cuya pasión por la tecnología, impulsada por un inmenso deseo de aprender, busca ofrecer las mejores experiencias visuales e interactivas a todo tipo de usuarios a través de sitios web impactantes.",
     projectstitle: "Proyectos",
