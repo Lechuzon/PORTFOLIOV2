@@ -28,9 +28,9 @@ const translations = {
     projectbtn1: "Vista Previa",
     projectbtn2: "Ver Repositorio",
     contactitle: "Contacto",
-    contactsub1: "¿Tienes un proyecto en mente?",
+    contactsub1: "¿Tienes un proyecto?",
     contactsub2: "No dudes en contactarme para el proyecto que tienes planeado. Conversemos sobre tus potenciales ideas.",
-    contactsub3: "Revisa mi perfil:",
+    contactsub3: "Revisa mi perfil profesional:",
   }
 }
 
