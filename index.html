@@ -20,16 +20,24 @@
   <nav class="menu-bar flex content-center">
     <ul class="flex">
       <li>
-        <a class="retroshadow" href="#aboutme">About Me</a>
+        <a data-translate="nav1" class="retroshadow" href="#aboutme">About Me</a>
       </li>
       <li>
-        <a class="retroshadow" href="#projects">Projects</a>
+        <a data-translate="nav2" class="retroshadow" href="#projects">Projects</a>
       </li>
       <li>
-        <a class="retroshadow" href="#contact">Contact</a>
+        <a data-translate="nav3" class="retroshadow" href="#contact">Contact</a>
       </li>
     </ul>
   </nav>
+  <div class="switchlanguage">
+    <input type="checkbox" id="language-toggle" class="toggle-input">
+    <label for="language-toggle" class="toggle-label">
+      <div class="toggle-background">
+        <div class="toggle-indicator"></div>
+      </div>
+    </label>
+  </div>
   <main class="m-auto">
     <section id="home" class="profile">
       <div class="inner-profile m-max-width flex items-center content-center m-auto">
@@ -38,7 +46,7 @@
           <h1 id="developer" class="title">{FullStack Developer}</h1>
           <div id="dwresume" class="ventanita">
             <a href="https://drive.google.com/file/d/1PdfFdgBNLahWObWNg3JPlCY_pWek38-c/view?usp=drive_link"
-              target="_blank"><button class="btn">Download Resume</button></a>
+              target="_blank"><button data-translate="buttonhome" class="btn">Download Resume</button></a>
           </div>
         </div>
         <div id="avatarfoto" class="avatar-list">
@@ -52,12 +60,12 @@
     </section>
     <section id="aboutme" class="aboutme">
       <div class="pt-30">
-        <h2 id="aboutmetitle" class="firstitle flex content-center">ABOUT ME</h2>
+        <h2 data-translate="aboutmetitle" id="aboutmetitle" class="firstitle flex content-center">ABOUT ME</h2>
         <div class="containerabout">
           <div id="aboutcard" class="aboutmecard">
-            <h1 class="abtitle flex content-center">Hey there!</h1>
-            <p>I'm a full-stack developer based in Lima, whose passion for technology, fueled by an insatiable desire to
-              learn, has led me to master the necessary tools for success in the professional world of IT.</p>
+            <h1 data-translate="aboutmegreeting" class="abtitle flex content-center">Hey there!</h1>
+            <p data-translate="aboutmeinfo">I'm a full-stack developer based in Lima, whose passion for technology, fueled by an insatiable desire to
+              learn, motivates me to master the necessary tools for success in the professional world of IT.</p>
           </div>
           <div id="emojicara">
             <img class="retrato" src="./images/steveavatar.png" alt="">
@@ -88,7 +96,7 @@
     </section>
     <section id="projects" class="works">
       <div class="m-max-width m-auto pt-30">
-        <h2 id="projectitle" class="secondtitle flex content-center animate-title">PROJECTS</h2>
+        <h2 data-translate="projectstitle" id="projectitle" class="secondtitle flex content-center animate-title">PROJECTS</h2>
         <div id="works" class="splide">
           <div class="splide__track">
             <ul class="splide__list">
@@ -127,9 +135,9 @@
                         </li>
                       </ul>
                       <div class="botoncard">
-                        <a href="https://proyecto-ecommerce-chi.vercel.app/" class="btn" target="_blank">Preview
+                        <a href="https://proyecto-ecommerce-chi.vercel.app/" class="btn " target="_blank" data-translate="projectbtn1">Preview
                           Site</a>
-                        <a href="https://github.com/Lechuzon/PROYECTO-VITE-ECOM" class="btn" target="_blank">View
+                        <a href="https://github.com/Lechuzon/PROYECTO-VITE-ECOM" class="btn" target="_blank" data-translate="projectbtn2">View
                           repository</a>
                       </div>
                     </div>
@@ -161,8 +169,8 @@
                         </li>
                       </ul>
                       <div class="botoncard">
-                        <a href="https://restaurantweb.vercel.app/" class="btn" target="_blank">Preview Site</a>
-                        <a href="https://github.com/Lechuzon/RESTAURANTWEB" class="btn" target="_blank">View
+                        <a href="https://restaurantweb.vercel.app/" class="btn" target="_blank" data-translate="projectbtn1">Preview Site</a>
+                        <a href="https://github.com/Lechuzon/RESTAURANTWEB" class="btn" target="_blank" data-translate="projectbtn1">View
                           repository</a>
                       </div>
                     </div>
@@ -194,8 +202,8 @@
                         </li>
                       </ul>
                       <div class="botoncard">
-                        <a href="https://carwash-tau.vercel.app/" class="btn" target="_blank">Preview Site</a>
-                        <a href="https://github.com/Lechuzon/CARWASHWEB" class="btn" target="_blank">View repository</a>
+                        <a href="https://carwash-tau.vercel.app/" class="btn" target="_blank" data-translate="projectbtn1">Preview Site</a>
+                        <a href="https://github.com/Lechuzon/CARWASHWEB" class="btn" target="_blank" data-translate="projectbtn1">View repository</a>
                       </div>
                     </div>
                   </div>
@@ -226,8 +234,8 @@
                         </li>
                       </ul>
                       <div class="botoncard">
-                        <a href="https://githubsearcher-mocha.vercel.app/" class="btn" target="_blank">Preview Site</a>
-                        <a href="https://github.com/Lechuzon/GITHUBSEARCHER" class="btn" target="_blank">View
+                        <a href="https://githubsearcher-mocha.vercel.app/" class="btn" target="_blank" data-translate="projectbtn1">Preview Site</a>
+                        <a href="https://github.com/Lechuzon/GITHUBSEARCHER" class="btn" target="_blank" data-translate="projectbtn1">View
                           repository</a>
                       </div>
                     </div>
@@ -259,8 +267,8 @@
                         </li>
                       </ul>
                       <div class="botoncard">
-                        <a href="https://translator-henna.vercel.app/" class="btn" target="_blank">Preview Site</a>
-                        <a href="https://github.com/Lechuzon/TRANSLATOR" class="btn" target="_blank">View repository</a>
+                        <a href="https://translator-henna.vercel.app/" class="btn" target="_blank" data-translate="projectbtn1">Preview Site</a>
+                        <a href="https://github.com/Lechuzon/TRANSLATOR" class="btn" target="_blank" data-translate="projectbtn1">View repository</a>
                       </div>
                     </div>
                   </div>
@@ -271,7 +279,7 @@
                   <div class="card">
                     <img src="./images/todoweb.png" alt="">
                     <div class="card-body">
-                      <h3 class="worktitle">TODO List</h3>
+                      <h3 class="worktitle">TODO App</h3>
                       <!-- <p>Reto de Frontend mentor BASIC</p> -->
                       <ul class="wrapper">
                         <li class="icon html">
@@ -291,8 +299,8 @@
                         </li>
                       </ul>
                       <div class="botoncard">
-                        <a href="https://todolist-flax-ten.vercel.app/" class="btn">Preview Site</a>
-                        <a href="https://github.com/Lechuzon/TODOLIST" class="btn">View repository</a>
+                        <a href="https://todolist-flax-ten.vercel.app/" class="btn" target="_blank" data-translate="projectbtn1">Preview Site</a>
+                        <a href="https://github.com/Lechuzon/TODOLIST" class="btn" target="_blank" data-translate="projectbtn1">View repository</a>
                       </div>
                     </div>
                   </div>
@@ -305,14 +313,14 @@
     </section>
     <section id="contact" class="contactme">
       <div class="m-max-width m-auto pt-30">
-        <h2 id="contactitle" class="firstitle flex content-center">CONTACT</h2>
+        <h2 data-translate="contactitle" id="contactitle" class="firstitle flex content-center">CONTACT</h2>
         <div class="containercontact">
           <div id="contactcard" class="contactmecard border full">
             <div class="">
-              <h1>Project in mind? Let's talk</h1>
-              <p class="glowIn">Feel free to contact me for any project requests. I'm ready to discuss about your
+              <h1 data-translate="contactsub1">Project in mind? Let's talk</h1>
+              <p data-translate="contactsub2" class="glowIn">Feel free to contact me for any project requests. I'm ready to discuss about your
                 potential ideas.</p>
-              <p><strong>Checkout my social media:</strong></p>
+              <p data-translate="contactsub3" class="checkoutsocial">Checkout my social media:</p>
               <div class="socialnetwork">
                 <a href="https://www.linkedin.com/in/stevemor/" target="_blank">
                   <img src="./images/sociallinked.png" alt="LinkedIn">

@@ -1,3 +1,64 @@
+const translations = {
+  en: {
+    nav1: "About me",
+    nav2: "Projects",
+    nav3: "Contact",
+    buttonhome: "Download Resume",
+    aboutmetitle: "About me",
+    aboutmegreeting: "Hey there!",
+    aboutmeinfo: "I'm a full-stack developer based in Lima, whose passion for technology, fueled by an insatiable desire to learn, motivates me to master the necessary tools for success in the professional world of IT.",
+    projectstitle: "Projects",
+    projectbtn1: "Preview Site",
+    projectbtn2: "View Repository",
+    contactitle: "Contact",
+    contactsub1: "Project in mind? Let's Talk",
+    contactsub2: "Feel free to contact me for any project requests. I'm ready to discuss about your potential ideas.",
+    contactsub3: "Checkout my social media:",
+  },
+
+  es: {
+    nav1: "Acerca de mi",
+    nav2: "Proyectos",
+    nav3: "Contacto",
+    buttonhome: "Descargar CV",
+    aboutmetitle: "Acerca de mi",
+    aboutmegreeting: "¡Hola!",
+    aboutmeinfo: "Soy un desarrollador full-stack cuya pasión por la tecnología, impulsada por un inmenso deseo de aprender, busca ofrecer las mejores experiencias visuales e interactivas a todo tipo de usuarios a través de sitios web impactantes.",
+    projectstitle: "Proyectos",
+    projectbtn1: "Vista Previa",
+    projectbtn2: "Ver Repositorio",
+    contactitle: "Contacto",
+    contactsub1: "¡Tienes un proyecto en mente?",
+    contactsub2: "No dudes en contactarme para el proyecto que tienes planeado. Estoy listo para escuchar acerca de tus potenciales ideas.",
+    contactsub3: "Revisa mi perfil profesional:",
+  }
+}
+
+
+function changeLanguage(language) {
+  const elements= document.querySelectorAll('[data-translate]');
+  elements.forEach(element => {
+    const key = element.getAttribute('data-translate');
+    if(translations[language] && translations[language][key]) {
+      element.textContent = translations[language][key];
+    }
+  })
+}
+
+const languageToggle = document.getElementById('language-toggle');
+
+languageToggle.addEventListener('change', function() {
+  const toggleIndicator = document.querySelector('.toggle-indicator');
+  if (this.checked) {
+    toggleIndicator.style.transform = 'translateX(100%)';
+    // Cambiar al idioma activado (azul)
+    changeLanguage('es');
+  } else {
+    toggleIndicator.style.transform = 'translateX(0)';
+    // Cambiar al idioma desactivado (amarillo)
+    changeLanguage('en');
+  }
+});
 
 const splide = new Splide( '.splide', {
   perPage: 3,
@@ -73,12 +134,12 @@ function glowInText() {
 }
 
 function activarGlowInSiVisible() {
-  let seccion = document.getElementById("contact"); // Cambia "miSeccion" por el ID de tu sección
+  let seccion = document.getElementById("contact"); 
   let seccionRect = seccion.getBoundingClientRect();
 
   if (seccionRect.top <= window.innerHeight && seccionRect.bottom >= 0) {
-    glowInText(); // Llama a tu función glowIn
-    window.removeEventListener("scroll", activarGlowInSiVisible); // Detiene la detección una vez que se ha activado
+    glowInText(); 
+    window.removeEventListener("scroll", activarGlowInSiVisible);
   }
 }
 
@@ -99,7 +160,7 @@ document.addEventListener('DOMContentLoaded', function () {
         var targetOffset = targetElement.getBoundingClientRect().top + yOffset;
         window.scrollTo({
           top: targetOffset,
-          behavior: 'smooth' // Esto controla la animación suave
+          behavior: 'smooth' 
         });
       }
     });
@@ -123,7 +184,23 @@ botonVolverArriba.addEventListener("click", function() {
 
 
 
-    
+const languageSwitchButton = document.querySelector('.switchlanguage');
+
+const firstSection = document.querySelector('.menu-bar');
+
+const secondSectionStart = firstSection.clientHeight;
+
+function handleScroll() {
+  const scrollTop = window.scrollY;
+
+  if (scrollTop > secondSectionStart) {
+    languageSwitchButton.style.opacity = 0;
+  } else {
+    languageSwitchButton.style.opacity = 1;
+  }
+}
+window.addEventListener('scroll', handleScroll);
+
 
 
 
