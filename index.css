@@ -131,7 +131,7 @@ body {
 .aboutme {
   background-color: #121212;
   position: flex;
-  height: 160vh;
+  height: 180vh;
   overflow: hidden;
 }
 
@@ -139,13 +139,13 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  height: 120vh;
+  height: 140vh;
   font-size: 18px;
 }
 
 .contactme {
   position: flex;
-  height: 100vh;
+  height: 110vh;
   overflow: hidden;
   background: url(./images/cool-background.png) center/cover no-repeat fixed;
 }
